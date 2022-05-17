@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Logo2 } from '../Logo/Logo2'
 
 export const NavHome = () => {
@@ -7,18 +8,18 @@ export const NavHome = () => {
            <ul className="nav1">
                 <Logo2></Logo2>
                <li>
-               <a href="#">Home</a>
+                 <Link className='a' to="/">Home</Link>
                </li>
                <li>
-               <a href="#">About us</a>
+               <Link className='a' to="/aboutUs">About Us</Link>
                </li>
                <li>
-                   <a href="#">Buy</a>
+               <Link className='a' to="/buy">Buy</Link>
                </li>
                <li>
-                   <a href="#">Expensive Things</a>
+               <Link className='a' to="/expensive">Expensive Things</Link>
                </li>
            </ul>
-        </nav>
+    </nav>
   )
 }
