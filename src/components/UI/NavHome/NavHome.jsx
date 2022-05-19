@@ -11,13 +11,13 @@ export const NavHome = () => {
                  <Link className='a' to="/">Home</Link>
                </li>
                <li>
-               <Link className='a' to="/aboutUs">About Us</Link>
+                  <Link className='a' to="/aboutUs">About Us</Link>
                </li>
                <li>
-               <Link className='a' to="/buy">Buy</Link>
+                  <Link className='a' to="/buy">Buy</Link>
                </li>
                <li>
-               <Link className='a' to="/expensive">Expensive Things</Link>
+                  <Link className='a' to="/expensive">Expensive Things</Link>
                </li>
            </ul>
     </nav>

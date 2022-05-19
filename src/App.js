@@ -1,12 +1,12 @@
 
 import { Route, Routes } from "react-router";
 
-import { Home } from "./components/Pages/Home";
-import { AboutUs } from "./components/Pages/AboutUs";
-import { Buy } from "./components/Pages/Buy";
-import { ExpensiveThin } from "./components/Pages/ExpensiveThin";
+import { Home } from "./components/Pages/Home/Home";
+import { AboutUs } from "./components/Pages/AboutUs/AboutUs";
+import { Buy } from "./components/Pages/Buy/Buy";
+import { ExpensiveThin } from "./components/Pages/ExpensiveThin/ExpensiveThin";
 import { HeaderHome } from "./components/Layaouts/HomeHeader/HeaderHome";
-import { NotFound } from "./components/Pages/NotFound";
+import { NotFound } from "./components/Pages/NotFound/NotFound";
 
 
 function App() {
