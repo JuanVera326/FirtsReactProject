@@ -1,4 +1,6 @@
 body {
+  background-color: white;
+  transition: 1s;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -18,20 +20,12 @@ body {
   margin-top: 50px;
 }
 .logo2{
+  transition: 3s;
   width: 135px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .logo2{
-    animation: logo2-spin infinite 20s linear;
-  }
-}
-@keyframes logo2-spin{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
+.logo2:hover{
+  transform: rotate(3turn);
+  transition: 3s;
 }
 .logo1{
   width: 135px;
@@ -42,31 +36,34 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  gap: 120PX;
-  background-color: rgb(32, 72, 148);
+  gap: 59PX;
+  background-color: #222222;
   padding-left: 50px;
   padding-right: 50px;
+  height: 200px;
 }
 .nav1{
   display: flex;
-  gap: 50px;
+  gap: 15px;
   list-style: none;
   justify-content: center;
   align-items: center;
 }
 .a{
+  transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 25px;
   color: aliceblue;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .a:hover{
-  transition: 1s;
-  background-color:rgb(35, 99, 219) ;
+  font-size: 38px;
+  transition: 0.5s;
+  background-color:rgb(23, 62, 134) ;
 }
 .title{
   color: aliceblue;
@@ -84,9 +81,9 @@ h1{
   width: 160px;
   height: 50px;
   font-size: 20px;
-  border-radius: 25px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(35, 99, 219);
+  border-radius: 15px;
+  background-color: rgb(32, 85, 184);
+  border: none;
   color: aliceblue;
 }
 .btn:hover{
@@ -107,11 +104,71 @@ h1{
   flex-direction: column ;
 }
 .num{
+  transition: 2s;
   font-size: 100px;
 }
+.num:hover{
+  transform: rotate(1turn);
+  transition: 2s;
+}
 .btnMa{
-  background-color: rgb(53, 246, 79);
+  background-color: rgb(0, 182, 15);
 }
 .btnMen{
   background-color: rgb(246, 92, 53);
+}
+.hr{
+  width: 500px;
+  height: 3px;
+  background-color: rgb(62, 102, 184);
+}
+/*---------*/
+body.color{
+  transition: 1s;
+  background-color: rgb(49, 103, 134);
+}
+body.color .hr{
+  background-color: rgb(255, 255, 255);
+}
+body.color .num{
+  transition: 1s;
+  color: white;
+}
+.lbl1{
+  display: inline-block;
+  width: 65px;
+  height: 33px;
+  background-color: rgb(170, 170, 170);
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative; 
+  transition: .2s;
+}
+.lbl1::after{
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: aliceblue;
+  border-radius: 100px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: .2s;
+}
+#switch1:checked + .lbl1::after{
+  left: 36px;
+}
+#switch1:checked + .lbl1{
+  background-color: rgb(0, 182, 15);
+}
+#switch1{
+  display: none;
+}
+.pintar{
+  background-color: #5b7686;
+}
+.tables{
+  padding-left: 120px;
+  padding-right: 120px;
 }

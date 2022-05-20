@@ -8,6 +8,7 @@ import { ExpensiveThin } from "./components/Pages/ExpensiveThin/ExpensiveThin";
 import { HeaderHome } from "./components/Layaouts/HomeHeader/HeaderHome";
 import { NotFound } from "./components/Pages/NotFound/NotFound";
 import { Contador } from "./components/Pages/Contador/Contador";
+import { HomeFooter } from "./components/Layaouts/HomeFooter/HomeFooter";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contador" element={<Contador></Contador>}></Route>
           <Route path="#" element={<NotFound></NotFound>}></Route>
       </Routes>
+      {/* <HomeFooter></HomeFooter> */}
     </div>
   );
 }
