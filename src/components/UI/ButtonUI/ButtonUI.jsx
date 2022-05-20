@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const ButtonUI = ({style,valu}) => {
+export const ButtonUI = ({style,event,texts}) => {
   
   return (
     <div>
-        <button className={style}>{valu}</button>
+        <button onClick={event} className={style}>{texts}</button>
     </div>
   )
 }

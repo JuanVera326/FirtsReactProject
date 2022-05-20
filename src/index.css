@@ -109,3 +109,9 @@ h1{
 .num{
   font-size: 100px;
 }
+.btnMa{
+  background-color: rgb(53, 246, 79);
+}
+.btnMen{
+  background-color: rgb(246, 92, 53);
+}
