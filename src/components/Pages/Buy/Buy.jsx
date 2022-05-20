@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Buy = () => {
   return (
-    <div>
+    <div className='section2'>
         <h1>Buy</h1>
     </div>
   )

@@ -1,9 +1,10 @@
 import React from 'react'
 
-export const ButtonUI = () => {
+export const ButtonUI = ({style,valu}) => {
+  
   return (
     <div>
-        <button>ButtonUI</button>
+        <button className={style}>{valu}</button>
     </div>
   )
 }
