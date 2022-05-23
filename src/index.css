@@ -63,7 +63,7 @@ body {
 .a:hover{
   font-size: 38px;
   transition: 0.5s;
-  background-color:rgb(23, 62, 134) ;
+  background-color:rgb(83, 130, 218) ;
 }
 .title{
   color: aliceblue;
@@ -82,7 +82,7 @@ h1{
   height: 50px;
   font-size: 20px;
   border-radius: 15px;
-  background-color: rgb(32, 85, 184);
+  background-color: rgb(83, 130, 218);
   border: none;
   color: aliceblue;
 }
@@ -104,6 +104,7 @@ h1{
   flex-direction: column ;
 }
 .num{
+  color: black;
   transition: 2s;
   font-size: 100px;
 }
@@ -126,6 +127,64 @@ h1{
   width: 35px;
   height: 35px;
 }
+.moon{
+  width: 18px;
+  height: 18px;
+}
+.sun{
+  width: 24px;
+  height: 24px;
+}
+.imagesDarkMode{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.imgContM{
+  transition: 0.5s;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.imgCont{
+  transition: 0.5s;
+  width: 400px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+.footerText{
+  color: white;
+  font-size: 25px;
+}
+footer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 300px;
+  background-color: #222222;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100px;
+  width: 100%;
+}
+.images{
+  display: flex;
+  gap: 50px;
+}
+.contA{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
 /*---------*/
 body.color{
   transition: 1s;
@@ -138,7 +197,13 @@ body.color .num{
   transition: 1s;
   color: white;
 }
+body.color h1,h2,h3{
+  color: white;
+}
 .lbl1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: inline-block;
   width: 65px;
   height: 33px;
@@ -168,11 +233,4 @@ body.color .num{
 }
 #switch1{
   display: none;
-}
-.pintar{
-  background-color: #5b7686;
-}
-.tables{
-  padding-left: 120px;
-  padding-right: 120px;
 }

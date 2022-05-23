@@ -7,8 +7,8 @@ import { Slider } from '../../UI/Slider/Slider.jsx';
 export const HeaderHome = () => {
   return (
     <div className="section1">
-        <NavHome></NavHome>
         <Slider></Slider>
+        <NavHome></NavHome>
         <h1 className='title'>REACT PRACTICE</h1> 
         <Logo2></Logo2>
     </div>
