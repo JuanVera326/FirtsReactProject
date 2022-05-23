@@ -22,7 +22,7 @@ function App() {
           <Route path="/contador" element={<Contador></Contador>}></Route>
           <Route path="#" element={<NotFound></NotFound>}></Route>
       </Routes>
-      {/* <HomeFooter></HomeFooter> */}
+      <HomeFooter></HomeFooter>
     </div>
   );
 }

@@ -122,6 +122,10 @@ h1{
   height: 3px;
   background-color: rgb(62, 102, 184);
 }
+.imgFoot{
+  width: 35px;
+  height: 35px;
+}
 /*---------*/
 body.color{
   transition: 1s;
