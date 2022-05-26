@@ -69,6 +69,15 @@ body {
   color: aliceblue;
   font-size: 50px;
 }
+.inputAPI{
+  transition: 1s;
+  border: solid 1px black;
+  width: 500px;
+  height: 30px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 25px;
+}
 h1{
   color: black;
 }
@@ -76,6 +85,13 @@ h1{
   display: flex;
   justify-content: center;
   font-size: 25px;
+  height: 66vh;
+}
+.section3{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
   height: 66vh;
 }
 .btn{
@@ -203,6 +219,10 @@ body.color .num{
 }
 body.color h1,h2,h3{
   color: white;
+}
+body.color .inputAPI{
+  transition: 1s;
+  border: solid 1px rgb(255, 255, 255);
 }
 .lbl1{
   display: flex;
