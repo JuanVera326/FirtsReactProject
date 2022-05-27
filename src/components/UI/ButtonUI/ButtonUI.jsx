@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 
 export const ButtonUI = ({style,event,texts}) => {
   

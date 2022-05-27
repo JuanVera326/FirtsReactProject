@@ -79,6 +79,7 @@ body {
   font-size: 25px;
 }
 h1{
+  transition: 1s;
   color: black;
 }
 .section2{
