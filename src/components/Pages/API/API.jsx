@@ -1,16 +1,17 @@
 import React, { useState,useEffect } from 'react'
 import { Cards } from '../../Layaouts/Cards/Cards';
 import { Input } from '../../UI/Input/Input'
-// import * as ReactDOM from 'react-dom';
 
 export const API = () => {
+  const URL = "https://rickandmortyapi.com/api/character";
 
-  const [pressKey,setPress] = useState(false);
-  let container;
+  const [pressKey,setPressKey] = useState(false);
+  
+  const [obj,setObj] = useState([]);
 
   const fKeyPress = (e) =>{
     if (e.key === 'Enter') {
-      setPress(!pressKey)
+      setPressKey(!pressKey);
     }
   } 
   useEffect(() => {
@@ -19,28 +20,21 @@ export const API = () => {
     customCards(inputAPI);
   }, [pressKey])
 
-
   const customCards = (inputAPI) => {
-    const URL = "https://rickandmortyapi.com/api/character";
-
     let newURl = (URL)+`/?name=${inputAPI.value}`;
-
     fetch(newURl)
     .then(response => response.json())
-    .then(data => (data.results.forEach(element => {
-        createCards(element);
-    })));
+    .then(data => setObj(data.results))
+    .catch(error => console.log("Error!"))
   }
-  
-  const createCards = (element) => {
-    console.log(element);
-    container.appendChild(<Cards styleCont="card" routeImg={element.image} styleImgen="imgCard"></Cards>);
-  }
+
   return (
     <div className='section3'>
         <h1>Rick & Morty</h1>
-        <Input tp="text" textInput="Ingrese el Nombre del Personaje..." style="inputAPI" event={(e) => fKeyPress(e)}></Input>
-        <div className='cards'>{container}</div>
+        <Input tp="text" textInput="Ingrese el Nombre del Personaje..." style="inputAPI" event={fKeyPress}></Input>
+        <div className='tarj'>
+          <Cards arr={obj}></Cards>
+        </div>
     </div>
   )
 }

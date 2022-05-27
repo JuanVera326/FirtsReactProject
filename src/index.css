@@ -8,6 +8,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 50vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
 .App{
   display: flex;
   flex-direction: column-reverse;
@@ -93,7 +105,6 @@ h1{
   flex-direction: column;
   font-size: 25px;
   align-items: center;
-  height: 66vh;
 }
 .btn{
   width: 160px;
@@ -206,7 +217,113 @@ footer{
   border-radius: 8px;
   background-color: aliceblue;
 }
+.tarj{
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  cursor: move;
+}
+#card{
+  transition: 1s;
+  font-size: 15px;
+  margin: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+#card {
+  transition: 1s;
+  background: #ffffff;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+}
+
+#card:hover {
+  transition: 1s;
+  background-color: rgb(182, 232, 245);
+  color: rgb(255, 255, 255);
+  transition: color 1s;
+}
+#card:hover:before, #card:hover:after {
+  animation: none; 
+  opacity: 0;
+}
+#card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+#card::after {
+  transition: 1s;
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+.h{
+  margin: 0;
+  transition: 1s;
+  color: black;
+}
+.imgCard{
+  border-radius: 8px;
+}
 /*---------*/
+body.color #card {
+  transition: 1s;
+  background: #191c29;
+}
+body.color #card:hover {
+  transition: 1s;
+  background-color: rgb(171, 112, 206);
+  transition: color 1s;
+}
+body.color .h{
+  transition: 1s;
+  color: rgb(255, 255, 255);
+}
 body.color{
   transition: 1s;
   background-color: rgb(49, 103, 134);
