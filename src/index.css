@@ -106,6 +106,12 @@ h1{
   font-size: 25px;
   align-items: center;
 }
+.section4{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+}
 .btn{
   width: 160px;
   height: 50px;
@@ -310,6 +316,32 @@ footer{
 .imgCard{
   border-radius: 8px;
 }
+.inputForm{
+  transition: 1s;
+  border: solid 1px black;
+  width: 700px;
+  height: 30px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 25px;
+}
+.formContactUS{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hForm{
+  transition: 1s;
+  color: black;
+  margin-bottom:0;
+  text-align: center;
+}
+.textForm{
+  padding: 10px;
+  font-size: 20px;
+  resize: none;
+}
 /*---------*/
 body.color #card {
   transition: 1s;
@@ -326,7 +358,7 @@ body.color .h{
 }
 body.color{
   transition: 1s;
-  background-color: rgb(49, 103, 134);
+  background-color: rgb(8, 80, 122);
 }
 body.color .hr{
   background-color: rgb(255, 255, 255);
@@ -338,7 +370,14 @@ body.color .num{
 body.color h1,h2,h3{
   color: white;
 }
+body.color .hForm{
+  color: white;
+}
 body.color .inputAPI{
+  transition: 1s;
+  border: solid 1px rgb(255, 255, 255);
+}
+body.color .inputForm{
   transition: 1s;
   border: solid 1px rgb(255, 255, 255);
 }

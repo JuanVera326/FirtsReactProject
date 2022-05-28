@@ -15,7 +15,7 @@ export const NavHome = () => {
                <Link className='a' to="/api">API R&M</Link>
             </li>
             <li>
-               <Link className='a' to="/expensive">Expensive Things</Link>
+               <Link className='a' to="/contactUs">Contact Us</Link>
             </li>
             <li>
                <Link className='a' to="/contador">Contador</Link>
