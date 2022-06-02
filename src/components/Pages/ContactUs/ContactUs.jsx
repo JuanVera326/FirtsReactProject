@@ -7,25 +7,12 @@ import { Input } from '../../UI/Input/Input'
 export const ContactUs = () => {
 
   const sendEmail = (event) => {
+
     let e;
     event.preventDefault();
     EmailJS.sendForm('service_z4vj053','template_jpc5bqj',event.target,'s03d9NuuOvQG74Qr_')
     .then(response => e = response.status,console.log(e))
     .catch(error => console.log(error));
-
-    // if (e === 200) {
-    //   Swal.fire({
-    //     icon: 'succes', 
-    //     title: 'Ok!',
-    //     text: 'Mensaje Enviado!',
-    //   })
-    // }else{
-    //   Swal.fire({
-    //     icon: 'error',
-    //     title: 'Oops...',
-    //     text: 'Algo salio mal!',
-    //   })
-    // }
   }
 
   return (
@@ -34,9 +21,9 @@ export const ContactUs = () => {
         <br />
         <form className='formContactUs' onSubmit={sendEmail}>
           <h3 className='hForm'>Name: </h3>
-          <Input tp="text" style="inputForm" textInput="Enter Your Name.." nameI="user_name"></Input>
+          <Input tp="text" style="inputForm" textInput="Enter Your Name.." nameI="user_name" valid="true"></Input>
           <h3 className='hForm'>Email: </h3>
-          <Input tp="text" style="inputForm" textInput="Enter Your Email.." nameI="user_email"></Input>
+          <Input tp="text" style="inputForm" textInput="Enter Your Email.." nameI="user_email" valid="true"></Input>
           <br />
           <hr className='hr'/>
           <h3 className='hForm'>Message:</h3>

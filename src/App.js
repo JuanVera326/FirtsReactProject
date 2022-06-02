@@ -9,6 +9,7 @@ import { Contador } from "./components/Pages/Contador/Contador";
 import { HomeFooter } from "./components/Layaouts/HomeFooter/HomeFooter";
 import { API } from "./components/Pages/API/API";
 import { ContactUs } from "./components/Pages/ContactUs/ContactUs";
+import { APITenor } from "./components/Pages/APITenor/APITenor";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/aboutUs" element={<AboutUs></AboutUs>}></Route>
-          <Route path="/api" element={<API></API>}></Route>
+          <Route path="/apirm" element={<API></API>}></Route>
           <Route path="/contactUs" element={<ContactUs></ContactUs>}></Route>
           <Route path="/contador" element={<Contador></Contador>}></Route>
+          <Route path="/tenorapi" element={<APITenor></APITenor>}></Route>
           <Route path="#" element={<NotFound></NotFound>}></Route>
       </Routes>
       <HomeFooter></HomeFooter>

@@ -96,9 +96,9 @@ h1{
 }
 .section2{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-size: 25px;
-  height: 66vh;
 }
 .section3{
   display: flex;
@@ -107,6 +107,12 @@ h1{
   align-items: center;
 }
 .section4{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+}
+.section5{
   display: flex;
   flex-direction: column;
   font-size: 25px;
@@ -341,6 +347,14 @@ footer{
   padding: 10px;
   font-size: 20px;
   resize: none;
+}
+.logoRiMo{
+  width: 700px;
+  margin-bottom: 40px;
+}
+.joker{
+  width: 900px;
+  height: 530px;
 }
 /*---------*/
 body.color #card {

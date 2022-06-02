@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react'
 import { Cards } from '../../Layaouts/Cards/Cards';
-import { Input } from '../../UI/Input/Input'
+import { Input } from '../../UI/Input/Input';
+import { Image } from '../../UI/Image/Image';
+import Logo from '../../../images/logo.png'
 
 export const API = () => {
   const URL = "https://rickandmortyapi.com/api/character";
@@ -30,7 +32,7 @@ export const API = () => {
 
   return (
     <div className='section3'>
-        <h1>Rick & Morty</h1>
+      <Image router={Logo} textAlt="Logo" styleImg="logoRiMo"></Image>
         <Input tp="text" textInput="Ingrese el Nombre del Personaje..." style="inputAPI" event={fKeyPress}></Input>
         <div className='tarj'>
           <Cards arr={obj}></Cards>
