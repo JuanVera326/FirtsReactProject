@@ -306,6 +306,75 @@ footer{
   animation: spin 2.5s linear infinite;
 }
 
+#cardTenor{
+  transition: 1s;
+  font-size: 15px;
+  margin: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+#cardTenor {
+  transition: 1s;
+  background: #ffffff;
+  width: 240px;    
+  height: 320px;
+  padding: 15px;
+  position: relative;
+  border-radius: 6px;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+}
+
+#cardTenor:hover {
+  transition: 1s;
+  background-color: rgb(182, 232, 245);
+  color: rgb(255, 255, 255);
+  transition: color 1s;
+}
+#cardTenor:hover:before, #cardTenor:hover:after {
+  animation: none; 
+  opacity: 0;
+}
+#cardTenor::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+#cardTenor::after {
+  transition: 1s;
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
 @keyframes spin {
   0% {
     --rotate: 0deg;
@@ -321,6 +390,13 @@ footer{
 }
 .imgCard{
   border-radius: 8px;
+  width: 300px;
+}
+.imgCardTenor{
+  border-radius: 8px;
+  width: 300px;
+  width: 240px;    
+  height: 320px;
 }
 .inputForm{
   transition: 1s;
@@ -362,6 +438,15 @@ body.color #card {
   background: #191c29;
 }
 body.color #card:hover {
+  transition: 1s;
+  background-color: rgb(171, 112, 206);
+  transition: color 1s;
+}
+body.color #cardTenor {
+  transition: 1s;
+  background: #191c29;
+}
+body.color #cardTenor:hover {
   transition: 1s;
   background-color: rgb(171, 112, 206);
   transition: color 1s;

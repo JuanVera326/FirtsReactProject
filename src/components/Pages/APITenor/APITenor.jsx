@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react'
-import { Cards } from '../../Layaouts/Cards/Cards';
+import { CardsTenor } from '../../Layaouts/Cards/CardsTenor';
 import { Input } from '../../UI/Input/Input'
 
 export const APITenor = () => {
@@ -9,26 +9,28 @@ export const APITenor = () => {
     const search = "search?";
 
     const key = "SVV3UWEMXHUE";
-    const query = `q=${input.value}`;
-    const limit = "&limit=16";
-    const [gifsGet, setgifsGet] = useState([])
-    
+    let limit = "&limit=16";
+
+    const [eInput, seteInput] = useState(false) 
     const getStr = (e) => {
-        let inputAPITenor = document.querySelector('.inputAPI');
-        console.log(inputAPITenor.value);
-        setgifsGet(!gifsGet);
+      seteInput(!eInput);
     }
     useEffect(() => {
-        let inputAPI = document.querySelector('.inputAPI');
-        console.log(inputAPI.value);
-        getGif(inputAPI);
-      }, [pressKey])
+      let inputAPITenor = document.querySelector('.inputAPI'); 
+      let fURL = URL + search + `q=${inputAPITenor.value}&key=${key}` + limit;
+      getGif(fURL);
+    }, [eInput])
+    
+    const [gifsGet, setgifsGet] = useState([])
+    useEffect(() => {
+        let fURL = URL + trend + key + limit;
+        getGif(fURL); 
+      }, [])
 
-    const getGif = () =>{
-        let newURl = (URL)+``;
-        fetch(newURl)
+    const getGif = (fURL) =>{
+        fetch(fURL)
         .then(response => response.json())
-        .then(data => setObj(data.results))
+        .then(data => setgifsGet(data.results))
         .catch(error => console.log("Error!"))
     }
 
@@ -37,7 +39,7 @@ export const APITenor = () => {
        <h1>Tenor - Gif</h1>
         <Input tp="text" textInput="Escriba aquí..." style="inputAPI" valid="true" cEvent={getStr}></Input>
         <div class="tarj">
-            {/* <Cards arr={""}></Cards> */}
+          <CardsTenor arr={gifsGet}></CardsTenor>
         </div>
     </div>
   )
