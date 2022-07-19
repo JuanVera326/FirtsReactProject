@@ -10,6 +10,7 @@ import { HomeFooter } from "./components/Layaouts/HomeFooter/HomeFooter";
 import { API } from "./components/Pages/API/API";
 import { ContactUs } from "./components/Pages/ContactUs/ContactUs";
 import { APITenor } from "./components/Pages/APITenor/APITenor";
+import { APIGiphy } from "./components/Pages/APIGiphy/APIGiphy";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs></ContactUs>}></Route>
           <Route path="/contador" element={<Contador></Contador>}></Route>
           <Route path="/tenorapi" element={<APITenor></APITenor>}></Route>
+          <Route path="/apigiphy" element={<APIGiphy></APIGiphy>}></Route>
           <Route path="#" element={<NotFound></NotFound>}></Route>
       </Routes>
       <HomeFooter></HomeFooter>

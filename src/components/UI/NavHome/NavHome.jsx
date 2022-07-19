@@ -18,6 +18,9 @@ export const NavHome = () => {
                <Link className='a' to="/tenorapi">API Tenor</Link>
             </li>
             <li>
+               <Link className='a' to="/apigiphy">API Giphy</Link>
+            </li>
+            <li>
                <Link className='a' to="/contactUs">Contact Us</Link>
             </li>
             <li>

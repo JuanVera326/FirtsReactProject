@@ -32,6 +32,7 @@ export const APITenor = () => {
         .then(response => response.json())
         .then(data => setgifsGet(data.results))
         .catch(error => console.log("Error!"))
+        console.log(fURL);
     }
 
   return (
