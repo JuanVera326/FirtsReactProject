@@ -11,9 +11,16 @@ export const APITenor = () => {
     const key = "SVV3UWEMXHUE";
     let limit = "&limit=16";
 
+///////
+  const [text, setText] = useState("");
+///////
+
     const [eInput, seteInput] = useState(false) 
     const getStr = (e) => {
       seteInput(!eInput);
+      ////
+      setText(e.target.value);
+      ////
     }
     useEffect(() => {
       let inputAPITenor = document.querySelector('.inputAPI'); 
@@ -39,6 +46,7 @@ export const APITenor = () => {
     <div className='section5'>
        <h1>Tenor - Gif</h1>
         <Input tp="text" textInput="Escriba aquí..." style="inputAPI" valid="true" cEvent={getStr}></Input>
+        <h1 id='TEXT'>{text}</h1>
         <div class="tarj">
           <CardsTenor arr={gifsGet}></CardsTenor>
         </div>
